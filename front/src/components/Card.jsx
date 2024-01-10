@@ -1,4 +1,4 @@
-export default function Card({name, species, status, gender, origin, image, onClose}) {
+export default function Card({name, species, id, status, gender, origin, image, onClose}) {
 
     return (
        <div className="card">

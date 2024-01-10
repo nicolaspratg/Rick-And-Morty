@@ -13,20 +13,16 @@ function App() {
     if (!id) return alert("Ingresa un ID");
     if (characters.find((char) => char.id === parseInt(id)))
       return alert(`Ya existe el personaje con el id ${id}`);
-    console.log(id);
     axios
       .get(`${URL}${id}?key=${API_KEY}`)
       .then(({ data }) => {
-        console.log("API Response:", data);
         if (data.id) {
-          // Assuming that if 'id' property exists, it's a valid character
           setCharacters([data, ...characters]);
         } else {
           alert("No hay personajes con ese ID!");
         }
       })
       .catch((err) => {
-        console.error("Error fetching data:", err);
         alert(err.message);
       });
   };
