@@ -7,7 +7,7 @@ export default function SearchBar(props) {
     setId(event.target.value);
   };
   const search = () => {
-    props.onSearch("ID del personaje");
+    props.onSearch(id);
     setId("");
   };
   return (
