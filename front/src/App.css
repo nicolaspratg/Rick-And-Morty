@@ -10,39 +10,9 @@ body, h1, h2, p, button {
   padding: 0;
 }
 
-.nav {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* White text color */
-  padding: 10px; /* Add some padding for better appearance */
-  text-align: center; /* Center the content horizontally */
-}
 
-.search-bar {
-  margin-top: 10px; /* Add some margin for separation */
-}
 
-.cards-container {
-  display: flex; /* Make it a flex container for horizontal alignment */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-  justify-content: space-around; /* Space around the cards horizontally */
-  padding: 20px; /* Add some padding for better appearance */
-}
 
-.card {
-  border: 1px solid #ddd; /* Add a border for separation */
-  border-radius: 5px; /* Rounded corners */
-  margin: 10px; /* Add some margin for separation */
-  padding: 15px; /* Add padding for better appearance */
-  text-align: center;
-}
-
-.card button {
-  background-color: #fff; /* White background */
-  color: #333; /* Dark text color */
-  border: none; /* Remove the default button border */
-  padding: 5px 10px; /* Add some padding for better appearance */
-  cursor: pointer; /* Add a pointer cursor on hover */
-}
 
 .read-the-docs {
   color: #888;

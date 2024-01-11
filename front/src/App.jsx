@@ -1,11 +1,13 @@
 import axios from "axios";
 import "./App.css";
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav.jsx";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/Nav/Nav.jsx";
 import About from "./views/About.jsx";
 import Detail from "./views/Detail.jsx";
+import Form from "./components/Form/Form.jsx"
+import { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -33,10 +35,14 @@ function App() {
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
+      {!isHomePage && <Nav onSearch={onSearch} />}
       <Routes>
+        <Route path="/" element={<Form/>}></Route>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
