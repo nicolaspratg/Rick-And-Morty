@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid #ddd; /* Add a border for separation */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px; /* Add some margin for separation */
+    padding: 15px; /* Add padding for better appearance */
+    text-align: center;
+  }
+  
+  .card button {
+    background-color: #d80e0e; /* White background */
+    color: #333; /* Dark text color */
+    border: none; /* Remove the default button border */
+    padding: 5px 10px; /* Add some padding for better appearance */
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }

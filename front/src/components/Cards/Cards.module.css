@@ -1,0 +1,6 @@
+.container {
+    display: flex; /* Make it a flex container for horizontal alignment */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    justify-content: space-around; /* Space around the cards horizontally */
+    padding: 20px; /* Add some padding for better appearance */
+  }

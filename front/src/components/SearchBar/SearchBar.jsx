@@ -1,5 +1,6 @@
 import { useState } from "react";
-import diceIcon from "../assets/dices.png";
+import diceIcon from "../../assets/dices.png";
+import style from "./SearchBar.module.css"
 
 export default function SearchBar(props) {
   // console.log(props);
@@ -17,7 +18,7 @@ export default function SearchBar(props) {
     setId("");
   };
   return (
-    <div className="search-bar">
+    <div className="style.searchBar">
       <input
         type="search"
         onChange={handleChange}
