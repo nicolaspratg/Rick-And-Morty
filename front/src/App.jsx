@@ -3,6 +3,9 @@ import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav.jsx";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import About from "./views/About.jsx";
+import Detail from "./views/Detail.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -26,14 +29,21 @@ function App() {
         alert(err.message);
       });
   };
-  
+
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
   return (
     <div className="App">
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About/>} />
+        <Route path="/detail/:id" element={<Detail/>} />
+      </Routes>
     </div>
   );
 }
