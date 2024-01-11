@@ -1,13 +1,47 @@
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 const Detail = () => {
+  const [character, setCharacter] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    axios
+      .get(`https://rym2.up.railway.app/api/character/${id}?key=henrystaff`)
+      .then(({ data }) => {
+        if (data.name) {
+          setCharacter(data);
+        } else {
+          window.alert("No hay personajes con ese ID");
+        }
+      });
+    return setCharacter({});
+  }, [id]);
   return (
-    <>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-        harum, rerum corporis assumenda provident doloremque praesentium fugit
-        reprehenderit obcaecati tempora officia iure ratione illum, tenetur fuga
-        accusamus dolore quae blanditiis.
-      </p>
-    </>
+    <div>
+      <h1>Character Details</h1>
+      <div>
+        <div>
+          <img src={character.image} alt="" className="dice-icon"/>
+        </div>
+        <p>
+          <strong>Name: </strong>
+          {character.name}
+        </p>
+      </div>
+      <div>
+        <p>
+          <strong>Gender: </strong>
+          {character.gender}
+        </p>
+      </div>
+      <div>
+        <p>
+          <strong>Species: </strong>
+          {character.species}
+        </p>
+      </div>
+    </div>
   );
 };
 

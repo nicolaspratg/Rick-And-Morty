@@ -1,4 +1,5 @@
 import { useState } from "react";
+import diceIcon from "../assets/dices.png";
 
 export default function SearchBar(props) {
   // console.log(props);
@@ -10,6 +11,11 @@ export default function SearchBar(props) {
     props.onSearch(id);
     setId("");
   };
+  const getRandomCharacter = () => {
+    const randomId = Math.floor(Math.random() * 826) + 1;
+    props.onSearch(randomId.toString());
+    setId("");
+  };
   return (
     <div className="search-bar">
       <input
@@ -19,6 +25,9 @@ export default function SearchBar(props) {
         value={id}
       />
       <button onClick={search}>Agregar</button>
+      <button onClick={getRandomCharacter}>
+        <img src={diceIcon} alt="" style={{ width: "15px", height: "15px" }} />
+      </button>
     </div>
   );
 }
