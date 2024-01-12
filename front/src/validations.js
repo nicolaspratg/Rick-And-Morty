@@ -23,7 +23,7 @@ export function validatePassword (password){
         return "Password cannot be empty."
     }
     if(!passwordRegEx.test(password)){
-        return "Password must have at least one number and be 6-10 characters long."
+        return "Between 6-10 characters only."
     }
     return null
 }

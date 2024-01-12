@@ -10,10 +10,11 @@ body, h1, h2, p, button {
   padding: 0;
 }
 
-
-
-
-
-.read-the-docs {
-  color: #888;
+body{
+  background-image: url("./assets/bg-mort-rick.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
