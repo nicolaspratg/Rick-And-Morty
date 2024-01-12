@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail, validatePassword } from "../../validations";
+import styles from "./Form.module.css";
 
 export default function Form() {
   const [userData, setUserData] = useState({
@@ -29,34 +30,41 @@ export default function Form() {
   };
 
   return (
-    <form>
-      <div>
-        <label htmlFor="email">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={userData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-          />
-        </label>
-        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-      </div>
-      <div>
-        <label htmlFor="password">
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={userData.password}
-            onChange={handleChange}
-            placeholder="Enter your password"
-          />
-        </label>
-        {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div className={styles["form-container"]}>
+      <form >
+        <div>
+          <h2 className={styles.formText}>Log in to find more about this page!</h2>
+          <label htmlFor="email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={userData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className={styles.input}
+            />
+          </label>
+          {errors.email && <p className={styles.errorText}>{errors.email}</p>}
+        </div>
+        <div>
+          <label htmlFor="password">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={userData.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+              className={styles.input}
+            />
+          </label>
+          {errors.password && <p className={styles.errorText}>{errors.password}</p>}
+        </div>
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
