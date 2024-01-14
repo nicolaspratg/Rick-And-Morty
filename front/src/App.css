@@ -1,7 +1,4 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -10,11 +7,3 @@ body, h1, h2, p, button {
   padding: 0;
 }
 
-body{
-  background-image: url("./assets/bg-mort-rick.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

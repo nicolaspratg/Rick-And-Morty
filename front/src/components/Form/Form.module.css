@@ -1,11 +1,21 @@
-.form-container form {
-  width: 100%; /* Adjust based on your design */
-  margin: auto;
-  margin-top: 50px;
+.bodyForm {
+  background-image: url("../../assets/bg-mort-rick.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 600px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
   background: rgb(37 35 34 / 75%);
+  /* Additional styles for the form container */
 }
 
 input {
@@ -17,6 +27,11 @@ input {
   border: 1px solid #ddd;
   background-color: #fff;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+body{
+  margin: 0;
+  padding: 0;
 }
 
 body .errorText {

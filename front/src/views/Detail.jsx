@@ -7,7 +7,7 @@ const Detail = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`https://rym2.up.railway.app/api/character/${id}?key=henrystaff`)
+      .get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);

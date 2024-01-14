@@ -1,6 +1,38 @@
+/* Nav.module.css */
 .nav {
-    background-color: #d20909; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 10px; /* Add some padding for better appearance */
-    text-align: center; /* Center the content horizontally */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Set a maximum width if desired */
+  background: rgb(37 35 34 / 75%);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: space-around;
+  background-color: #1a1a1aa1;
+  transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover{
+  background-color: #e8772bc7;
+}
+
+/* Add some padding to the body to prevent content from being hidden behind the fixed navbar */
+body {
+  padding-top: 40px; /* Adjust the value based on your navbar height */
+}

@@ -1,6 +1,23 @@
 .container {
-    display: flex; /* Make it a flex container for horizontal alignment */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-    justify-content: space-around; /* Space around the cards horizontally */
-    padding: 20px; /* Add some padding for better appearance */
-  }
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Make it a flex container for horizontal alignment */
+  gap: 20px;
+  margin-top: 25px;
+  max-width: 1000px; /* Add some padding for better appearance */
+}
+
+.bodyCards {
+  background-image: url("../../assets/bg-rickMeh.png");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 92.3vh;
+  width: 100vw;
+  padding-top: 70px;
+  background-position: center; /* Adjust the percentage as needed */
+}

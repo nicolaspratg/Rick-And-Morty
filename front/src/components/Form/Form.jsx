@@ -2,26 +2,32 @@ import React, { useState } from "react";
 import { validateEmail, validatePassword } from "../../validations";
 import styles from "./Form.module.css";
 
-export default function Form() {
+export default function Form({ login }) {
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState({});
+
+  const [errors, setErrors] = useState({ email: "", password: "" });
+
   const handleChange = (event) => {
     const { name, value } = event.target;
+
     setUserData((prevUserData) => ({
       ...prevUserData,
       [name]: value,
     }));
+
     if (name === "email") {
       const error = validateEmail(value);
+
       setErrors((prevErrors) => ({
         ...prevErrors,
         [name]: error,
       }));
     } else if (name === "password") {
       const error = validatePassword(value);
+
       setErrors((prevErrors) => ({
         ...prevErrors,
         [name]: error,
@@ -29,11 +35,18 @@ export default function Form() {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    login(userData);
+  };
+
   return (
-    <div className={styles["form-container"]}>
-      <form >
+    <div className={styles.bodyForm}>
+      <form onSubmit={handleSubmit} className={styles.formContainer}>
         <div>
-          <h2 className={styles.formText}>Log in to find more about this page!</h2>
+          <h2 className={styles.formText}>
+            Log in to find more about this page!
+          </h2>
           <label htmlFor="email">
             <input
               type="email"
@@ -59,7 +72,9 @@ export default function Form() {
               className={styles.input}
             />
           </label>
-          {errors.password && <p className={styles.errorText}>{errors.password}</p>}
+          {errors.password && (
+            <p className={styles.errorText}>{errors.password}</p>
+          )}
         </div>
         <button type="submit" className={styles.submitButton}>
           Submit
