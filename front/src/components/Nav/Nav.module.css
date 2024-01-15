@@ -18,20 +18,6 @@
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
-.button {
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
-  background-color: #1a1a1aa1;
-  transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.button:hover{
-  background-color: #e8772bc7;
-}
-
 /* Add some padding to the body to prevent content from being hidden behind the fixed navbar */
 body {
   padding-top: 40px; /* Adjust the value based on your navbar height */

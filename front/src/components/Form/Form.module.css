@@ -43,9 +43,6 @@ body .errorText {
   width: 100%;
   padding: 10px;
   background-color: #1a1a1aa1;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
   cursor: pointer;
   transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

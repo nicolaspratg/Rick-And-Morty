@@ -1,11 +1,10 @@
 /* SearchBar.module.css */
 .searchBar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%; /* Adjust the width as needed */
   border-radius: 10px;
-  
 }
 
 .inputContainer {
@@ -21,19 +20,12 @@
   border-radius: 10px;
 }
 
-.button {
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
+.searchBarBtn {
   background-color: #1a1a1aa1;
   transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #ffffffe0;
 }
 
-.button:hover{
+.searchBarBtn:hover {
   background-color: #2a3d69b3;
 }
-
-

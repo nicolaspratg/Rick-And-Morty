@@ -21,26 +21,26 @@ export default function SearchBar(props) {
   return (
     <div className={styles.searchBar}>
       <div>
-        <NavLink className={styles.button} to="/about">
-          About
+        <NavLink to="/about">
+          <button className={styles.searchBarBtn}>About</button>
         </NavLink>
-        <NavLink className={styles.button} to="/home">
-          Home
+        <NavLink to="/home">
+          <button className={styles.searchBarBtn}>Home</button>
         </NavLink>
       </div>
       <div className={styles.inputContainer}>
         <input
           type="search"
           onChange={handleChange}
-          placeholder="Ingresa un ID"
+          placeholder="Enter an ID"
           value={id}
         />
       </div>
       <div>
-        <button onClick={search} className={styles.button}>
+        <button onClick={search} className={styles.searchBarBtn}>
           Agregar
         </button>
-        <button onClick={getRandomCharacter} className={styles.button}>
+        <button onClick={getRandomCharacter} className={styles.searchBarBtn}>
           <img
             src={diceIcon}
             alt=""
