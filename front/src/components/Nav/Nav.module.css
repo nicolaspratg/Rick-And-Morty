@@ -7,8 +7,7 @@
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* Adjust the width as needed */
-  max-width: 600px; /* Set a maximum width if desired */
+  width: 56%; /* Adjust the width as needed */
   background: rgb(37 35 34 / 75%);
   color: #fff;
   padding: 10px;
@@ -16,6 +15,16 @@
   z-index: 1000;
   border-radius: 10px;
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logOutBtn {
+  background-color: #1a1a1aa1;
+  transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.logOutBtn:hover {
+  background-color: #bb1d1dab;
 }
 
 /* Add some padding to the body to prevent content from being hidden behind the fixed navbar */

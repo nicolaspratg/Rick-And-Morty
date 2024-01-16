@@ -27,6 +27,9 @@ export default function SearchBar(props) {
         <NavLink to="/home">
           <button className={styles.searchBarBtn}>Home</button>
         </NavLink>
+        <NavLink to="/favorites">
+          <button className={styles.searchBarBtn}>Favorites</button>
+        </NavLink>
       </div>
       <div className={styles.inputContainer}>
         <input
