@@ -1,13 +1,23 @@
+import { useSelector } from "react-redux";
+import Card from "../../components/Card/Card";
+
 const Favorites = () => {
+  const favorites = useSelector((state) => state.myFavorites);
   return (
     <>
-      <h1>Favorites</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-        animi laborum quibusdam, aspernatur qui iusto eius ipsum iste omnis
-        ullam exercitationem quia possimus sunt aliquid culpa quo sed obcaecati
-        non!
-      </p>
+      {favorites.map(({ id, name, species, gender, image }) => {
+        return (
+          <Card
+            key={id}
+            id={id}
+            name={name}
+            species={species}
+            gender={gender}
+            origin={origin}
+            image={image}
+          />
+        );
+      })}
     </>
   );
 };

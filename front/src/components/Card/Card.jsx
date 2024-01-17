@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addFav, removeFav } from "../../redux/actions";
@@ -17,7 +17,6 @@ export default function Card({
   const myFavorites = useSelector((state) => state.myFavorites);
   const dispatch = useDispatch();
   const [isFav, setIsFav] = useState(false);
-  const isFavorite = myFavorites.some((fav) => fav.id === id);
   const handleFavorite = () => {
     if (isFav) {
       setIsFav(false);
@@ -27,8 +26,14 @@ export default function Card({
       setIsFav(true);
       dispatch(addFav({ id, name, status, species, gender, origin, image }));
     }
-    setIsFav(!isFav);
   };
+  useEffect(() => {
+    myFavorites.forEach((fav) => {
+      if (fav.id === id) {
+        setIsFav(true);
+      }
+    });
+  }, [myFavorites, id]);
 
   return (
     <div className={styles.card}>
@@ -44,7 +49,7 @@ export default function Card({
       <h2>{origin}</h2>
       <img src={image} alt={name} />
       <button onClick={handleFavorite}>
-        {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        {isFav ? "Remove from Favorites" : "Add to Favorites"}
       </button>
     </div>
   );

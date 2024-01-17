@@ -36,18 +36,18 @@ function App() {
   const onSearch = (id) => {
     if (!id) return alert("Enter an ID");
     if (characters.find((char) => char.id === parseInt(id)))
-      return alert(`A character with ID ${id} already exists`);
+      return alert(`A character with ID ${id} already exists.`);
     axios
       .get(`${URL}${id}`)
       .then(({ data }) => {
         if (data.id) {
           setCharacters([data, ...characters]);
         } else {
-          alert("There are no characters with that ID");
+          alert("There are no characters with that ID.");
         }
       })
       .catch((err) => {
-        alert(err.message);
+        alert("A character with that ID does not exist.");
       });
   };
 
