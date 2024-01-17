@@ -2,6 +2,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import styles from "./Detail.module.css";
 const Detail = () => {
   const [character, setCharacter] = useState({});
   const { id } = useParams();
@@ -22,7 +23,7 @@ const Detail = () => {
       <h1>Character Details</h1>
       <div>
         <div>
-          <img src={character.image} alt="" className="dice-icon"/>
+          <img src={character.image} alt="" className="dice-icon" />
         </div>
         <p>
           <strong>Name: </strong>

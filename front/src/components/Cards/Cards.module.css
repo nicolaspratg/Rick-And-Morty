@@ -19,5 +19,6 @@
   min-height: 92.3vh;
   width: 100vw;
   padding-top: 70px;
+  padding-left: 100px;
   background-position: center; /* Adjust the percentage as needed */
 }
