@@ -1,7 +1,7 @@
 import { useState } from "react";
 import diceIcon from "../../assets/whiteDice.png";
 import styles from "./SearchBar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function SearchBar(props) {
   // console.log(props);
@@ -18,6 +18,9 @@ export default function SearchBar(props) {
     props.onSearch(randomId.toString());
     setId("");
   };
+
+  const location = useLocation();
+  console.log(location);
   return (
     <div className={styles.searchBar}>
       <div>

@@ -1,8 +1,8 @@
 .card {
-  border: none; /* Add a border for separation */
-  border-radius: 10px; /* Rounded corners */
-  margin: 10px; /* Add some margin for separation */
-  padding: 15px; /* Add padding for better appearance */
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
   text-align: center;
   background: rgb(37 35 34 / 75%);
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
 .card img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: For a circular image */
+  border-radius: 10px;
 }
 
 .cardContent {

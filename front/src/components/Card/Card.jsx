@@ -52,7 +52,7 @@ export default function Card({
       <h2>{status}</h2>
       <h2>{gender}</h2>
       <h2>{origin}</h2> */}
-        <img src={image} alt={name}  />
+        <img src={image} alt={name} />
       </div>
     </div>
   );

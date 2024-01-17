@@ -19,28 +19,38 @@ const Detail = () => {
     return setCharacter({});
   }, [id]);
   return (
-    <div>
-      <h1>Character Details</h1>
-      <div>
+    <div className={styles.bgDetail}>
+      <div className={styles.detail}>
+        <h2>{character.name}</h2>
         <div>
-          <img src={character.image} alt="" className="dice-icon" />
+          <img src={character.image} alt="" className={styles.detailImg} />
         </div>
-        <p>
-          <strong>Name: </strong>
-          {character.name}
-        </p>
-      </div>
-      <div>
-        <p>
-          <strong>Gender: </strong>
-          {character.gender}
-        </p>
-      </div>
-      <div>
-        <p>
-          <strong>Species: </strong>
-          {character.species}
-        </p>
+        <div>
+          <p>
+            <strong>Status: </strong>
+            {character.status}
+          </p>
+          <p>
+            <strong>Species: </strong>
+            {character.species}
+          </p>
+          <p>
+            <strong>Gender: </strong>
+            {character.gender}
+          </p>
+          <p>
+            <strong>Species: </strong>
+            {character.species}
+          </p>
+          <p>
+            <strong>Origin: </strong>
+            {character.origin && character.origin.name}
+          </p>
+          <p>
+            <strong>Location: </strong>
+            {character.location && character.location.name}
+          </p>
+        </div>
       </div>
     </div>
   );
