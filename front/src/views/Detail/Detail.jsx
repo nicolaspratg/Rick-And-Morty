@@ -27,10 +27,6 @@ const Detail = () => {
         </div>
         <div>
           <p>
-            <strong>Status: </strong>
-            {character.status}
-          </p>
-          <p>
             <strong>Species: </strong>
             {character.species}
           </p>
@@ -39,12 +35,12 @@ const Detail = () => {
             {character.gender}
           </p>
           <p>
-            <strong>Species: </strong>
-            {character.species}
-          </p>
-          <p>
             <strong>Origin: </strong>
             {character.origin && character.origin.name}
+          </p>
+          <p>
+            <strong>Status: </strong>
+            {character.status}
           </p>
           <p>
             <strong>Location: </strong>
