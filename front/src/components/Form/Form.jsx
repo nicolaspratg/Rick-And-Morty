@@ -41,45 +41,47 @@ export default function Form({ login }) {
   };
 
   return (
-    <div className={styles.bodyForm}>
-      <form onSubmit={handleSubmit} className={styles.formContainer}>
-        <div>
-          <h2 className={styles.formText}>
-            Log in to find more about this page!
-          </h2>
-          <label htmlFor="email">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={userData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className={styles.input}
-            />
-          </label>
-          {errors.email && <p className={styles.errorText}>{errors.email}</p>}
-        </div>
-        <div>
-          <label htmlFor="password">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={userData.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              className={styles.input}
-            />
-          </label>
-          {errors.password && (
-            <p className={styles.errorText}>{errors.password}</p>
-          )}
-        </div>
-        <button type="submit" className={styles.submitButton}>
-          Submit
-        </button>
-      </form>
+    <div className={styles.pageContainer}>
+      <div>
+        <form onSubmit={handleSubmit} className={styles.formContainer}>
+          <div>
+            <h2 className={styles.formText}>
+              Log in to find more about this page!
+            </h2>
+            <label htmlFor="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={userData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                className={styles.input}
+              />
+            </label>
+            {errors.email && <p className={styles.errorText}>{errors.email}</p>}
+          </div>
+          <div>
+            <label htmlFor="password">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                value={userData.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                className={styles.input}
+              />
+            </label>
+            {errors.password && (
+              <p className={styles.errorText}>{errors.password}</p>
+            )}
+          </div>
+          <button type="submit" className={styles.submitButton}>
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

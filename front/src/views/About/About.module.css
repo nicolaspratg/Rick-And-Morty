@@ -1,0 +1,95 @@
+.bodyAbout {
+  background-image: url("../../assets/bg-rickFU.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 92.3vh;
+  width: 95vw;
+  padding-top: 70px;
+  padding-left: 96px;
+  background-position: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  background: rgb(37 35 34 / 75%);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.container h1 {
+  color: #62ff00b0;
+}
+
+.container h2 {
+  color: #62ff00b0;
+  margin-top: 20px;
+}
+
+.container p {
+  color: #ffffff;
+}
+
+.techList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.techList li {
+  margin-right: 15px;
+}
+
+.socList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.socIg {
+  background-image: url("../../assets/soc-ig.png");
+  background-color: #ffffff00;
+  background-size: cover;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.socTw {
+  background-image: url("../../assets/soc-tw.png");
+  background-color: #ffffff00;
+  background-size: cover;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.socMail {
+  background-image: url("../../assets/soc-mail.png");
+  background-color: #ffffff00;
+  background-size: cover;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.socLkdn {
+  background-image: url("../../assets/soc-lkdn.png");
+  background-color: #ffffff00;
+  background-size: cover;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.socWpp {
+  background-image: url("../../assets/soc-wpp.png");
+  background-color: #ffffff00;
+  background-size: cover;
+  height: 40px;
+  margin-right: 10px;
+}

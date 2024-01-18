@@ -1,0 +1,13 @@
+.bgFavs {
+    background-image: url("../../assets/bg-RickNMort.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+  }
+

@@ -37,23 +37,24 @@ export default function Card({
 
   return (
     <div className={styles.card}>
-      <button
-        onClick={handleFavorite}
-        className={isFav ? styles.favFilled : styles.favEmpty}
-      >
-        {/* {isFav ? "Remove from Favorites" : "Add to Favorites"} */}
-      </button>
-      <button onClick={() => onClose(id)} className={styles.closeBtn}></button>
-      <div className={styles.cardContent}>
-        <Link to={`/detail/${id}`} className={styles.cardName}>
-          <h2 className={styles.cardText}>{name}</h2>
-        </Link>
-        {/* <h2>{species}</h2>
-      <h2>{status}</h2>
-      <h2>{gender}</h2>
-      <h2>{origin}</h2> */}
-        <img src={image} alt={name} />
+      <div>
+        <button
+          onClick={handleFavorite}
+          className={isFav ? styles.favFilled : styles.favEmpty}
+        ></button>
+        <button
+          onClick={() => onClose(id)}
+          className={styles.closeBtn}
+        ></button>
       </div>
+      <Link to={`/detail/${id}`} className={styles.cardName}>
+        <div>
+          <div className={styles.cardContent}>
+            <h2 className={styles.cardText}>{name}</h2>
+            <img src={image} alt={name} />
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }

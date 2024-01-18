@@ -21,29 +21,29 @@ const Detail = () => {
   return (
     <div className={styles.bgDetail}>
       <div className={styles.detail}>
-        <h2>{character.name}</h2>
+        <h2 className={styles.subtitle}>{character.name}</h2>
         <div>
           <img src={character.image} alt="" className={styles.detailImg} />
         </div>
-        <div>
+        <div className={styles.detailText}>
           <p>
-            <strong>Species: </strong>
+            <strong className={styles.subtitle}>Species: </strong>
             {character.species}
           </p>
           <p>
-            <strong>Gender: </strong>
+            <strong className={styles.subtitle}>Gender: </strong>
             {character.gender}
           </p>
           <p>
-            <strong>Origin: </strong>
+            <strong className={styles.subtitle}>Origin: </strong>
             {character.origin && character.origin.name}
           </p>
           <p>
-            <strong>Status: </strong>
+            <strong className={styles.subtitle}>Status: </strong>
             {character.status}
           </p>
           <p>
-            <strong>Location: </strong>
+            <strong className={styles.subtitle}>Location: </strong>
             {character.location && character.location.name}
           </p>
         </div>

@@ -1,4 +1,4 @@
-.bodyForm {
+.pageContainer {
   background-image: url("../../assets/bg-mort-rick.png");
   background-size: cover;
   display: flex;
@@ -15,7 +15,7 @@
   border-radius: 10px;
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
   background: rgb(37 35 34 / 75%);
-  /* Additional styles for the form container */
+  backdrop-filter: blur(3px);
 }
 
 input {
@@ -29,7 +29,7 @@ input {
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -50,15 +50,12 @@ body .errorText {
 .submitButton:hover {
   background-color: #e8772bc7;
 }
-.formText{
+.formText {
   color: #ffffffe0;
 }
 
-/* Media query for smaller screens or when form-container is smaller */
 @media (max-width: 600px) {
   .form-container form {
     width: 80%;
   }
-
-  /* Adjust other styles accordingly for smaller screens */
 }

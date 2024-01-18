@@ -19,8 +19,6 @@ export default function SearchBar(props) {
     setId("");
   };
 
-  const location = useLocation();
-  console.log(location);
   return (
     <div className={styles.searchBar}>
       <div>
@@ -44,7 +42,7 @@ export default function SearchBar(props) {
       </div>
       <div>
         <button onClick={search} className={styles.searchBarBtn}>
-          Agregar
+          Add
         </button>
         <button onClick={getRandomCharacter} className={styles.searchBarBtn}>
           <img
