@@ -19,8 +19,8 @@ const Favorites = (e) => {
         <div className={styles.filterSection}>
           <h2>My Favorites</h2>
           <select onChange={handleOrder}>
-            <option value="A">Ascendente</option>
-            <option value="D">Descendente</option>
+            <option value="A">Ascending</option>
+            <option value="D">Descending</option>
           </select>
           <select onChange={handleFilter}>
             <option value="Male">Male</option>
