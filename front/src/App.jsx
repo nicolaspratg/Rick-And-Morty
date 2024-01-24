@@ -11,7 +11,7 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const URL = `https://rickandmortyapi.com/api/character/`;
+  const URL = `http://localhost:3001/rickandmorty/character/`;
   const [access, setAccess] = useState(false);
   const EMAIL = "ndepratg@gmail.com";
   const PASSWORD = "notrichyet";
