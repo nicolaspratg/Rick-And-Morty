@@ -42,10 +42,6 @@ const Detail = () => {
             <strong className={styles.subtitle}>Status: </strong>
             {character.status}
           </p>
-          <p>
-            <strong className={styles.subtitle}>Location: </strong>
-            {character.location && character.location.name}
-          </p>
         </div>
       </div>
     </div>
