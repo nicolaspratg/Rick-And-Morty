@@ -3,10 +3,10 @@ import { filterCards, orderCards } from "../../redux/actions";
 import Card from "../../components/Card/Card";
 import styles from "./Favorites.module.css";
 
-const Favorites = (e) => {
+const Favorites = () => {
   const dispatch = useDispatch();
   const myFavorites = useSelector((state) => state.myFavorites);
-  const handleOrder = () => {
+  const handleOrder = (e) => {
     dispatch(orderCards(e.target.value));
   };
 
@@ -23,6 +23,7 @@ const Favorites = (e) => {
             <option value="D">Descending</option>
           </select>
           <select onChange={handleFilter}>
+            <option value="all">All</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Genderless">Genderless</option>
