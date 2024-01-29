@@ -42,6 +42,7 @@ body .errorText {
 .submitButton {
   width: 100%;
   padding: 10px;
+  margin: 0;
   background-color: #1a1a1aa1;
   cursor: pointer;
   transition: color 1s ease-in-out, background-color 0.3s ease-in-out,
