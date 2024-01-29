@@ -1,29 +1,20 @@
 export function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!email) {
-    return "Email cannot be empty.";
-  }
-
-  if (email.length > 35) {
-    return "Email cannot have more than 35 characters.";
-  }
-
-  if (!emailRegex.test(email)) {
-    return "Invalid email format.";
-  }
-
-  // If all conditions are met, the email is considered valid
-  return null;
+  !email
+    ? "Email cannot be empty"
+    : email.length > 34
+    ? "Email cannot have more than 35 characters."
+    : !emailRegex.test(email)
+    ? "Invalid email format."
+    : null;
 }
 
-export function validatePassword (password){
-    const passwordRegEx = /^(?=.*\d).{6,10}$/;
-    if (!password) {
-        return "Password cannot be empty."
-    }
-    if(!passwordRegEx.test(password)){
-        return "Between 6-10 characters only."
-    }
-    return null
+export function validatePassword(password) {
+  const passwordRegEx = /^(?=.*\d).{6,10}$/;
+
+  !password
+    ? "Password cannot be empty."
+    : !passwordRegEx.test(password)
+    ? "Between 6-10 characters only."
+    : null;
 }
