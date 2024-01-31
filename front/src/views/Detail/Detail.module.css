@@ -4,6 +4,7 @@
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -19,13 +20,8 @@
   background: rgb(37 35 34 / 75%);
   backdrop-filter: blur(3px);
   box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
+  position: relative;
   transition: transform 0.3s ease-in-out;
-  left: 36%;
-}
-
-.detail:hover {
-  transform: scale(1.02);
 }
 
 .detailImg {
@@ -46,4 +42,8 @@
 
 .searchBarBtn:hover {
   background-color: #d56b68a8;
+}
+
+.container {
+  text-align: center;
 }
