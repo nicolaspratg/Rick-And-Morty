@@ -48,11 +48,11 @@ export default function Card({
         ></button>
       </div>
       <Link to={`/detail/${id}`} className={styles.cardName}>
-        <div>
-          <div className={styles.cardContent}>
-            <h2 className={styles.cardText}>{name}</h2>
-            <img src={image} alt={name} />
+        <div className={styles.cardContent}>
+          <div className={styles.cardText}>
+              <h3>{name}</h3>
           </div>
+          <img src={image} alt={name} />
         </div>
       </Link>
     </div>
