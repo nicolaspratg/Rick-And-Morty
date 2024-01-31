@@ -15,14 +15,18 @@ function App() {
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = "http://localhost:3001/rickandmorty/login/";
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-      const { access } = data;
-      setAccess(data);
-      access && navigate("/home");
-    });
+  async function login(userData) {
+    try {
+      const { email, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login/";
+      const { data } = await axios(
+        URL + `?email=${email}&password=${password}`
+      );
+      setAccess(data.access);
+      !access ? navigate("/home") : alert("Incorrect credentials");
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   const logout = () => {
@@ -31,25 +35,24 @@ function App() {
   };
 
   useEffect(() => {
-    !access && navigate("/");
+    !access && navigate("/home"); // con este no pide login
+    // !access && navigate("/");  //con este nos pide login
   }, [access]);
 
-  const onSearch = (id) => {
-    if (!id) return alert("Enter an ID");
-    if (characters.find((char) => char.id === parseInt(id)))
-      return alert(`A character with ID ${id} already exists.`);
-    axios
-      .get(`${URL}${id}`)
-      .then(({ data }) => {
-        if (data.id) {
-          setCharacters([data, ...characters]);
-        } else {
-          alert("There are no characters with that ID.");
-        }
-      })
-      .catch((err) => {
-        alert("A character with that ID does not exist.");
-      });
+  const onSearch = async (id) => {
+    try {
+      if (!id) return alert("Enter an ID");
+      if (characters.find((char) => char.id === parseInt(id)))
+        return alert(`A character with ID ${id} already exists.`);
+      const { data } = await axios.get(`${URL}${id}`);
+      if (data.id) {
+        setCharacters([data, ...characters]);
+      } else {
+        alert(`There are no characters with ID ${id}.`);
+      }
+    } catch (error) {
+      alert(`A character with ID ${id} does not exist.`);
+    }
   };
 
   const onClose = (id) => {
