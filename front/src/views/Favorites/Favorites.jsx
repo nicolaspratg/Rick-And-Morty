@@ -18,17 +18,17 @@ const Favorites = () => {
       <div>
         <div className={styles.filterSection}>
           <h2>My Favorites</h2>
-          <select onChange={handleOrder}>
-            <option value="A">Ascending</option>
-            <option value="D">Descending</option>
-          </select>
-          <select onChange={handleFilter}>
-            <option value="all">All</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Genderless">Genderless</option>
-            <option value="unknown">Unknown</option>
-          </select>
+            <select onChange={handleOrder}>
+              <option value="A">Ascending</option>
+              <option value="D">Descending</option>
+            </select>
+            <select onChange={handleFilter}>
+              <option value="all">All</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Genderless">Genderless</option>
+              <option value="unknown">Unknown</option>
+            </select>
         </div>
         <div className={styles.cardContainer}>
           {myFavorites.map(({ id, name, species, gender, image, origin }) => {
