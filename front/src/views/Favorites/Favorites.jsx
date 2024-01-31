@@ -5,7 +5,7 @@ import styles from "./Favorites.module.css";
 
 const Favorites = () => {
   const dispatch = useDispatch();
-  const myFavorites = useSelector((state) => state.myFavorites);
+  const myFavorites = useSelector((state) => state.favFilter);
   const handleOrder = (e) => {
     dispatch(orderCards(e.target.value));
   };
