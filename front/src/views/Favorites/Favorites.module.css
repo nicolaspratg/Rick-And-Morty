@@ -31,6 +31,10 @@ select:hover {
   transform: scale(1.06);
 }
 
+select:focus:not(:focus-visible) {
+  outline: #6c4574;
+}
+
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
