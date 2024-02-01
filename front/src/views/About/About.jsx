@@ -18,9 +18,9 @@ const About = () => {
           <li>||</li>
           <li>JavaScript</li>
           <li>||</li>
-          <li>HTML</li>
+          <li>Node.js</li>
           <li>||</li>
-          <li>CSS</li>
+          <li>Express</li>
         </ul>
         <h2>My Focus:</h2>
         <p>
