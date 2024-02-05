@@ -14,7 +14,9 @@ export function validatePassword(password) {
 
   return !password
     ? "Password cannot be empty"
+    : password.length > 10
+    ? "Password cannot have more than 10 characters"
     : !passwordRegEx.test(password)
-    ? "Between 6-10 characters only"
+    ? "Invalid password format. Must contain at least one digit"
     : null;
 }
