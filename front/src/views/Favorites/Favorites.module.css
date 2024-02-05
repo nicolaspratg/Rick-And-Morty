@@ -31,8 +31,11 @@ select:hover {
   transform: scale(1.06);
 }
 
-select:focus:not(:focus-visible) {
-  outline: #6c4574;
+select:focus {
+  outline: none;
+}
+option:focus{
+  outline: none;
 }
 
 .cardContainer {
