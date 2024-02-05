@@ -23,7 +23,7 @@ function App() {
         URL + `?email=${email}&password=${password}`
       );
       setAccess(data.access);
-      !access ? navigate("/home") : alert("Incorrect credentials");
+      !access ? navigate("/about") : alert("Incorrect credentials");
     } catch (error) {
       console.log(error.message);
     }
