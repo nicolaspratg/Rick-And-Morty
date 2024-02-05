@@ -57,6 +57,7 @@ export default function Form({ login }) {
                 onChange={handleChange}
                 placeholder="Enter your email"
                 className={styles.input}
+                autoComplete="off"
               />
             </label>
             {errors.email && <p className={styles.errorText}>{errors.email}</p>}
