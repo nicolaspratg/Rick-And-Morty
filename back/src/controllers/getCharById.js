@@ -1,5 +1,5 @@
 const axios = require("axios");
-const BASE_URL = "https://rym2.up.railway.app/api/character/";
+const BASE_URL = "https://rickandmortyapi.com/api/character/";
 const API_KEY = "pi-nicolaspratg";
 
 module.exports.getCharById = async (req, res) => {

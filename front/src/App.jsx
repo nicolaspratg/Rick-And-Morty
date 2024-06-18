@@ -11,14 +11,14 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const URL = `http://localhost:3001/rickandmorty/character/`;
+  const URL = `https://rickandmortyapi.com/api/character/`;
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
   async function login(userData) {
     try {
       const { email, password } = userData;
-      const URL = "http://localhost:3001/rickandmorty/login/";
+      const URL = "https://rickandmortyapi.com/api/login/";
       const { data } = await axios(
         URL + `?email=${email}&password=${password}`
       );
@@ -35,8 +35,8 @@ function App() {
   };
 
   useEffect(() => {
-    // !access && navigate("/home"); // con este no pide login
-    !access && navigate("/");  //con este nos pide login
+    !access && navigate("/home"); // con este no pide login
+    //!access && navigate("/");  //con este nos pide login
   }, [access]);
 
   const onSearch = async (id) => {

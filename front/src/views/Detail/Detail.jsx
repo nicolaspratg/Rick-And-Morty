@@ -8,7 +8,7 @@ const Detail = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/rickandmorty/character/${id}`)
+      .get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);
