@@ -17,25 +17,6 @@ This project is a web application that allows users to search for characters fro
 - **JavaScript**: Programming language used for both client and server-side code.
 - **Pure CSS**: Styling the application without additional frameworks.
 
-## Installation
-
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/nicolaspratg/Rick-And-Morty.git
-    cd Rick-And-Morty
-    ```
-
-2. **Install backend dependencies**:
-    ```sh
-    cd backend
-    npm install
-    ```
-
-3. **Install frontend dependencies**:
-    ```sh
-    cd ../frontend
-    npm install
-    ```
 
 ## Usage
 
@@ -45,15 +26,15 @@ This project is a web application that allows users to search for characters fro
     npm start
     ```
 
-    The backend server will start on `http://localhost:5000`.
+    The backend server will start on `http://localhost:3001`.
 
 2. **Start the frontend server**:
     ```sh
     cd ../frontend
-    npm start
+    npm run dev
     ```
 
-    The frontend server will start on `http://localhost:3000`.
+    The frontend server will start on `http://localhost:5173`.
 
 3. **Open your browser** and navigate to `http://localhost:3000` to use the application.
 
@@ -61,27 +42,24 @@ This project is a web application that allows users to search for characters fro
 
 ### Characters
 
-- **GET /characters/:id**: Get character details by ID.
+- **GET /character/:id**: Get character details by ID.
 
 ### Favorites
 
-- **POST /favorites**: Add a character to the favorites list.
-- **GET /favorites**: Get all favorite characters.
-- **DELETE /favorites/:id**: Remove a character from the favorites list.
+- **POST /fav**: Add a character to the favorites list.
+- **DELETE /fav/:id**: Remove a character from the favorites list.
 
 ## Screenshots
 
-![Search by ID](./screenshots/search-by-id.png)
-*Search for characters by their ID.*
+![Search by ID](./front/src/assets/RnM%20Home.png)
+*Visualize characters as you search for them by their ID.*
 
-![Character Details](./screenshots/character-details.png)
+![Character Details](./front/src/assets/RnM%20Detail.png)
 *View detailed information about each character.*
 
-![Favorites](./screenshots/favorites.png)
+![Favorites](./front/src/assets/RnM%20Favorites.png)
 *Mark characters as favorites and view your favorite list.*
 
-![Filter Characters](./screenshots/filter-characters.png)
-*Filter through characters based on various criteria.*
 
 ## Contributing
 
