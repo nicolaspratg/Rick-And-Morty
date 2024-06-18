@@ -1,25 +1,102 @@
-# Proyecto Integrador
+# Rick and Morty Character Explorer
 
-En este repositorio deberás desarrollar tu Proyecto Integrador. Durante el Módulo 2 trabajarás principalmente en la carpeta "front", luego en el Módulo 3 empezarás a utilizar la carpeta "back" (puedes dejarla así como está por el momento).
+This project is a web application that allows users to search for characters from the Rick and Morty universe using their ID, access detailed information about them, mark characters as favorites, and filter through the list of characters. The application is built with Node.js, Express, React, JavaScript, and pure CSS.
 
-En la carpeta "front" te encontrarás con un Proyecto inicializado con el Framework Vite. NO TE PREOCUPES, no debes cambiar ninguna configuración. Simplemente sigue las instrucciones de tu Instructor/a que te irá guiando y de las consignas de la Homework.
+## Features
 
-Recuerda que para realizar las peticiones a la API externa de Rick & Morty, utilizaremos la siguiente URL como ejemplo:
+- **Search by ID**: Find characters by their unique ID.
+- **Character Details**: View detailed information about each character.
+- **Mark Favorites**: Add characters to a list of favorites.
+- **Filter Characters**: Filter characters based on various criteria.
 
-https://rym2.up.railway.app/api/character/10?key={tu-api-key}
+## Technologies Used
 
-Donde tu API KEY está compuesta de la siguiente manera: `pi-{tu-usuario-de-github}`
+- **Node.js**: Backend runtime environment.
+- **Express**: Web framework for Node.js.
+- **React**: Frontend library for building user interfaces.
+- **JavaScript**: Programming language used for both client and server-side code.
+- **Pure CSS**: Styling the application without additional frameworks.
 
-Recuerda que tu usuario de Github debe ir en minúsculas, por ejemplo: `pi-misuaurio`
+## Installation
 
-Puedes encontrar además tu API KEY en la descripción de este repositorio.
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/nicolaspratg/Rick-And-Morty.git
+    cd Rick-And-Morty
+    ```
 
-Aspectos a tener en cuenta:
+2. **Install backend dependencies**:
+    ```sh
+    cd backend
+    npm install
+    ```
 
-- Recuerda ir PUSHEANDO los avances de tu proyecto diariamente. No importa si avanzaste mucho, poco, o todavía tienes consignas por completar. Es importante que vayas actualizando el repositorio con tu trabajo.
+3. **Install frontend dependencies**:
+    ```sh
+    cd ../frontend
+    npm install
+    ```
 
-- Es VITAL que utilices tu API KEY personal, y no la compartas con tus compañeros/as. 
+## Usage
 
-- Si alguna petición a la API te responde con un error, checkea bien que hayas escrito correctamente el endpoint y tu API KEY.
+1. **Start the backend server**:
+    ```sh
+    cd backend
+    npm start
+    ```
 
-Muchos éxitos en este Proyecto! 
+    The backend server will start on `http://localhost:5000`.
+
+2. **Start the frontend server**:
+    ```sh
+    cd ../frontend
+    npm start
+    ```
+
+    The frontend server will start on `http://localhost:3000`.
+
+3. **Open your browser** and navigate to `http://localhost:3000` to use the application.
+
+## API Endpoints
+
+### Characters
+
+- **GET /characters/:id**: Get character details by ID.
+
+### Favorites
+
+- **POST /favorites**: Add a character to the favorites list.
+- **GET /favorites**: Get all favorite characters.
+- **DELETE /favorites/:id**: Remove a character from the favorites list.
+
+## Screenshots
+
+![Search by ID](./screenshots/search-by-id.png)
+*Search for characters by their ID.*
+
+![Character Details](./screenshots/character-details.png)
+*View detailed information about each character.*
+
+![Favorites](./screenshots/favorites.png)
+*Mark characters as favorites and view your favorite list.*
+
+![Filter Characters](./screenshots/filter-characters.png)
+*Filter through characters based on various criteria.*
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Rick and Morty API](https://rickandmortyapi.com/) for providing the character data.
+- [React](https://reactjs.org/) for the frontend framework.
+- [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/) for the backend setup.
+
+---
+
+Developed by [Your Name](https://github.com/nicolaspratg)
