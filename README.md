@@ -77,4 +77,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Developed by [Nicolás de Prat Gay](https://www.linkedin.com/in/ndepratg/)
+Developed by <a href="https://www.linkedin.com/in/ndepratg/" target="_blank">Nicolás de Prat Gay</a>
