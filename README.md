@@ -17,24 +17,25 @@ This project is a web application that allows users to search for characters fro
 - **JavaScript**: Programming language used for both client and server-side code.
 - **Pure CSS**: Styling the application without additional frameworks.
 
-
 ## Usage
 
 1. **Start the backend server**:
-    ```sh
-    cd backend
-    npm start
-    ```
 
-    The backend server will start on `http://localhost:3001`.
+   ```sh
+   cd backend
+   npm start
+   ```
+
+   The backend server will start on `http://localhost:3001`.
 
 2. **Start the frontend server**:
-    ```sh
-    cd ../frontend
-    npm run dev
-    ```
 
-    The frontend server will start on `http://localhost:5173`.
+   ```sh
+   cd ../frontend
+   npm run dev
+   ```
+
+   The frontend server will start on `http://localhost:5173`.
 
 3. **Open your browser** and navigate to `http://localhost:3000` to use the application.
 
@@ -52,14 +53,13 @@ This project is a web application that allows users to search for characters fro
 ## Screenshots
 
 ![Search by ID](./front/src/assets/RnM%20Home.png)
-*Visualize characters as you search for them by their ID.*
+_Visualize characters as you search for them by their ID._
 
 ![Character Details](./front/src/assets/RnM%20Detail.png)
-*View detailed information about each character.*
+_View detailed information about each character._
 
 ![Favorites](./front/src/assets/RnM%20Favorites.png)
-*Mark characters as favorites and view your favorite list.*
-
+_Mark characters as favorites and view your favorite list._
 
 ## Contributing
 
@@ -77,4 +77,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Developed by [Your Name](https://github.com/nicolaspratg)
+Developed by [Nicolás de Prat Gay](https://www.linkedin.com/in/ndepratg/)
