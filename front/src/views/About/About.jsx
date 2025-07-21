@@ -18,26 +18,35 @@ const About = () => {
       <div className={styles.container}>
         <h1>About Me</h1>
         <p>
-          Hello, I'm Nicolás de Prat Gay, a {getAge()}-year-old web developer with a
-          passion for crafting engaging and functional online experiences. My
-          journey into the world of programming began this year, and since then,
-          I've been immersed in the fascinating realm of web development.
+          Hello, I'm Nicolás de Prat Gay, a {getAge()}-year-old web developer
+          focused on building scalable and responsive web applications. Over the
+          past few years, I’ve contributed to real-world products across Europe,
+          collaborating with cross-functional teams to deliver clean,
+          maintainable code using React.js, Next.js, Node.js, and PostgreSQL. I
+          value teamwork, adaptability, and clear communication, and I bring
+          that mindset to every project I work on. Currently based in Vienna and
+          holding an EU passport, I’m open to opportunities across Europe.
         </p>
         <h2>Tech Stack:</h2>
         <ul className={styles.techList}>
           <li>React</li>
           <li>||</li>
-          <li>JavaScript</li>
+          <li>Next.js</li>
+          <li>||</li>
+          <li>Javascript</li>
+          <li>||</li>
+          <li>TypeScript</li>
           <li>||</li>
           <li>Node.js</li>
           <li>||</li>
-          <li>Express</li>
+          <li>Express.js</li>
         </ul>
         <h2>My Focus:</h2>
         <p>
-          I specialize in the development of dynamic and responsive websites,
-          ensuring seamless user experiences. Collaborating with SoyHenry, I am
-          currently working on this exciting project.
+          I specialize in building dynamic, responsive websites that prioritize
+          performance and user experience. I’m currently working on an exciting
+          project that reflects my passion for clean design, modern web
+          technologies, and scalable architecture.
         </p>
         <h2>Why I Love What I Do:</h2>
         <p>
@@ -54,18 +63,13 @@ const About = () => {
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/drdeprat" target="_blank">
-                <button className={styles.socTw}></button>
-              </a>
-            </li>
-            <li>
               <a href="mailto:ndepratg@gmail.com" target="_blank">
                 <button className={styles.socMail}></button>
               </a>
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/nicol%C3%A1s-d-423575122/"
+                href="https://www.linkedin.com/in/ndepratg/"
                 target="_blank"
               >
                 <button className={styles.socLkdn}></button>
@@ -73,7 +77,7 @@ const About = () => {
             </li>
             <li>
               <a
-                href="https://api.whatsapp.com/send?phone=5491169114533"
+                href="https://api.whatsapp.com/send?phone=4306606467794"
                 target="_blank"
               >
                 <button className={styles.socWpp}></button>
