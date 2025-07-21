@@ -4,6 +4,8 @@
   gap: 20px;
   margin-top: 25px;
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bodyCards {
@@ -12,9 +14,9 @@
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   width: 100vw;
   padding-top: 70px;
-  padding-left: 80px;
   background-position: center;
 }

@@ -18,12 +18,12 @@ function App() {
   async function login(userData) {
     try {
       const { email, password } = userData;
-      const URL = "http://localhost:3001/rickandmorty/login/";
+      const URL = "https://rickandmortyapi.com/api/login/";
       const { data } = await axios(
         URL + `?email=${email}&password=${password}`
       );
       setAccess(data.access);
-      !access ? navigate("/home") : alert("Incorrect credentials");
+      !access ? navigate("/about") : alert("Incorrect credentials");
     } catch (error) {
       console.log(error.message);
     }
@@ -35,8 +35,8 @@ function App() {
   };
 
   useEffect(() => {
-    // !access && navigate("/home"); // con este no pide login
-    !access && navigate("/");  //con este nos pide login
+    !access && navigate("/home"); // con este no pide login
+    //!access && navigate("/");  //con este nos pide login
   }, [access]);
 
   const onSearch = async (id) => {
