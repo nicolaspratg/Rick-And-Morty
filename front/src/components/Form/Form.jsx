@@ -58,6 +58,7 @@ export default function Form({ login }) {
                 placeholder="Enter your email"
                 className={styles.input}
                 autoComplete="off"
+                // pressing Enter here will submit the form
               />
             </label>
             {errors.email && <p className={styles.errorText}>{errors.email}</p>}
@@ -72,6 +73,7 @@ export default function Form({ login }) {
                 onChange={handleChange}
                 placeholder="Enter your password"
                 className={styles.input}
+                // pressing Enter here will submit the form
               />
             </label>
             {errors.password && (

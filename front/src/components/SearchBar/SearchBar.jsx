@@ -38,6 +38,9 @@ export default function SearchBar(props) {
           onChange={handleChange}
           placeholder="Enter an ID"
           value={id}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") search();
+          }}
         />
       </div>
       <div>
