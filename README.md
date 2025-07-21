@@ -11,7 +11,7 @@ A full stack web application to search, favorite, and explore Rick and Morty cha
 
 ## Live Demo
 
-- **Frontend:** [Rick & Morty Character Finder](https://rick-and-morty-peach-zeta.vercel.app/home)
+- **Frontend:** [Rick & Morty Character Finder](https://rick-and-morty-peach-zeta.vercel.app/)
 - **Backend API:** [https://rick-and-morty-cawz.onrender.com](https://rick-and-morty-cawz.onrender.com)
 
 ## Screenshots
