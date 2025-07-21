@@ -1,13 +1,24 @@
 import React from "react";
 import styles from "./About.module.css";
 
+const getAge = () => {
+  const birthDate = new Date(1999, 3, 24); // Months are 0-indexed: 3 = April
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+};
+
 const About = () => {
   return (
     <div className={styles.bodyAbout}>
       <div className={styles.container}>
         <h1>About Me</h1>
         <p>
-          Hello, I'm Nicolás de Prat Gay, a 24-year-old web developer with a
+          Hello, I'm Nicolás de Prat Gay, a {getAge()}-year-old web developer with a
           passion for crafting engaging and functional online experiences. My
           journey into the world of programming began this year, and since then,
           I've been immersed in the fascinating realm of web development.
