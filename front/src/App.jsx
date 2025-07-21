@@ -11,14 +11,15 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const URL = `https://rickandmortyapi.com/api/character/`;
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
+  const CHARACTER_URL = `${API_BASE_URL}/rickandmorty/character/`;
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
   async function login(userData) {
     try {
       const { email, password } = userData;
-      const URL = "https://rickandmortyapi.com/api/login/";
+      const URL = `${API_BASE_URL}/rickandmorty/login/`;
       const { data } = await axios(
         URL + `?email=${email}&password=${password}`
       );
@@ -44,7 +45,7 @@ function App() {
       if (!id) return alert("Enter an ID");
       if (characters.find((char) => char.id === parseInt(id)))
         return alert(`A character with ID ${id} already exists.`);
-      const { data } = await axios.get(`${URL}${id}`);
+      const { data } = await axios.get(`${CHARACTER_URL}${id}`);
       if (data.id) {
         setCharacters([data, ...characters]);
       } else {
