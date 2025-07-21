@@ -1,80 +1,73 @@
-# Rick and Morty Character Explorer
+# Rick and Morty Full Stack App
 
-This project is a web application that allows users to search for characters from the Rick and Morty universe using their ID, access detailed information about them, mark characters as favorites, and filter through the list of characters. The application is built with Node.js, Express, React, JavaScript, and pure CSS.
+A full stack web application to search, favorite, and explore Rick and Morty characters. Built with React, Node.js, Express, and deployed on Vercel (frontend) and Render (backend).
 
 ## Features
 
-- **Search by ID**: Find characters by their unique ID.
-- **Character Details**: View detailed information about each character.
-- **Mark Favorites**: Add characters to a list of favorites.
-- **Filter Characters**: Filter characters based on various criteria.
+- User login (demo, any credentials accepted)
+- Search for characters by ID
+- Add/remove favorites
+- Responsive, modern UI
 
-## Technologies Used
+## Live Demo
 
-- **Node.js**: Backend runtime environment.
-- **Express**: Web framework for Node.js.
-- **React**: Frontend library for building user interfaces.
-- **JavaScript**: Programming language used for both client and server-side code.
-- **Pure CSS**: Styling the application without additional frameworks.
-
-## Usage
-
-1. **Start the backend server**:
-
-   ```sh
-   cd backend
-   npm start
-   ```
-
-   The backend server will start on `http://localhost:3001`.
-
-2. **Start the frontend server**:
-
-   ```sh
-   cd ../frontend
-   npm run dev
-   ```
-
-   The frontend server will start on `http://localhost:5173`.
-
-3. **Open your browser** and navigate to `http://localhost:3000` to use the application.
-
-## API Endpoints
-
-### Characters
-
-- **GET /character/:id**: Get character details by ID.
-
-### Favorites
-
-- **POST /fav**: Add a character to the favorites list.
-- **DELETE /fav/:id**: Remove a character from the favorites list.
+- **Frontend:** [your-vercel-url](https://your-vercel-url.vercel.app)
+- **Backend API:** [https://rick-and-morty-cawz.onrender.com](https://rick-and-morty-cawz.onrender.com)
 
 ## Screenshots
 
-![Search by ID](./front/src/assets/RnM%20Home.png)
-_Visualize characters as you search for them by their ID._
+*(Add a few screenshots of your app!)*
 
-![Character Details](./front/src/assets/RnM%20Detail.png)
-_View detailed information about each character._
+## Getting Started
 
-![Favorites](./front/src/assets/RnM%20Favorites.png)
-_Mark characters as favorites and view your favorite list._
+### Prerequisites
 
-## Contributing
+- Node.js (v16+ recommended)
+- npm
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### Clone the repository
 
-## License
+```bash
+git clone https://github.com/nicolaspratg/Rick-And-Morty.git
+cd Rick-And-Morty
+```
 
-This project is licensed under the MIT License.
+### Backend Setup
 
-## Acknowledgements
+```bash
+cd back
+npm install
+npm start
+```
+The backend will run on [http://localhost:3001](http://localhost:3001) by default.
 
-- [Rick and Morty API](https://rickandmortyapi.com/) for providing the character data.
-- [React](https://reactjs.org/) for the frontend framework.
-- [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/) for the backend setup.
+### Frontend Setup
 
----
+```bash
+cd ../front
+npm install
+npm run dev
+```
+The frontend will run on [http://localhost:5173](http://localhost:5173) by default.
 
-Developed by [Nicolás de Prat Gay](https://www.linkedin.com/in/ndepratg/)
+### Environment Variables
+
+- **Frontend:**  
+  Create a `.env` file in `/front` with:
+  ```
+  VITE_API_URL=http://localhost:3001
+  ```
+  (or your deployed backend URL for production)
+
+- **Backend:**  
+  No environment variables required for local development.
+
+## Deployment
+
+- **Frontend:** Deployed on Vercel. Set `VITE_API_URL` in Vercel project settings to your Render backend URL.
+- **Backend:** Deployed on Render. Set the root directory to `/back`.
+
+## Author
+
+- Nicolás de Prat Gay  
+  [LinkedIn](https://www.linkedin.com/in/ndepratg/)
