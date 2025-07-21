@@ -35,8 +35,8 @@ function App() {
   };
 
   useEffect(() => {
-    !access && navigate("/home"); // con este no pide login
-    //!access && navigate("/");  //con este nos pide login
+    // !access && navigate("/home"); // con este no pide login
+    !access && navigate("/");  //con este nos pide login
   }, [access]);
 
   const onSearch = async (id) => {
